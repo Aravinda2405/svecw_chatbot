@@ -12,7 +12,7 @@ csv_url="svcew_details.csv"
 try:
   df=pd.read_csv(csv_url)
 except Expection as e:
-  st.error(f"Failed to load the CSV file. Error: {e})
+  st.error(f"Failed to load the CSV file. Error: {e}")
   st.stop()
 df = df.fillna("")
 df['Question'] = df['Question'].str.lower()
